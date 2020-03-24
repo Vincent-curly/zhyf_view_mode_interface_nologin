@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <title>Log in | Django site admin</title>
+    <!--<link rel="stylesheet" type="text/css" href="/static/hospital_test/css/base.css">-->
+    <!--<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">-->
+    <!--<link rel="stylesheet" type="text/css" href="/static/hospital_test/css/responsive.css">-->
+    <!--<meta name="robots" content="NONE,NOARCHIVE">-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+        body {margin: 0;padding: 0;font-size: 14px;color: #333;background: #fff;}
+        body.login {background: #f8f8f8;}
+        .login #header {height: auto;padding: 15px 16px;justify-content: center;}
+        .login #header h1 {font-size: 18px;}
+        .login #header h1 a {color: #fff;}
+        .login #content {padding: 20px 20px 0;}
+        .login #container {background: #fff;border: 1px solid #eaeaea;border-radius: 4px;overflow: hidden;width: 28em;min-width: 300px;margin: 100px auto;}
+        .login #content-main {width: 100%;}
+        .login .form-row {padding: 4px 0;float: left;width: 100%;border-bottom: none;}
+        .login .form-row label {padding-right: 0.5em;line-height: 2em;font-size: 1em;clear: both;color: #333;}
+        .login .form-row #id_username, .login .form-row #id_password {clear: both;padding: 8px;width: 100%;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+        .login span.help {font-size: 10px;display: block;}
+        .login .submit-row {clear: both;padding: 1em 0 0 9.4em;margin: 0;border: none;background: none;text-align: left;}
+        .login .password-reset-link {text-align: center;}
+
+        label {font-size: 14px;}
+    </style>
+</head>
+<body class=" login" data-admin-utc-offset="0">
+<!-- Container -->
+<div id="container">
+    <!-- Header -->
+    <div id="header">
+        <div id="branding">
+            <h3 id="site-name">编辑联系人</h3>
+        </div>
+    </div>
+    <!-- END Header -->
+    <!-- Content -->
+    <div id="content" class="colM">
+        <div id="content-main">
+            <form action="/admin/login/?next=/admin/" method="post" id="login-form">
+                <div class="form-row">
+                    <label class="required" for="id_username">地址编号:</label>
+                    <input type="text" readonly="readonly" name="username" autofocus autocapitalize="none" autocomplete="username" maxlength="150" required id="id_username">
+                </div>
+                <div class="form-row">
+                    <label class="required" for="id_username">收货人姓名:</label>
+                    <input type="text" name="username" autofocus autocapitalize="none" autocomplete="username" maxlength="150" required id="id_username">
+                </div>
+                <div class="form-row">
+                    <label class="required" for="id_password">收货人电话:</label>
+                    <input type="password" name="password" autocomplete="current-password" required id="id_password">
+                    <input type="hidden" name="next" value="/admin/">
+                </div>
+                <div class="form-row">
+                    <label class="required" for="id_username">地址:</label><br>
+                    <select id="province" style="width: 32%;font-size: 15px">
+                        <option>省</option>
+                    </select>
+                    <select id="city" style="width: 32%;font-size: 15px">
+                        <option value="市">市(城市)</option>
+                    </select>
+                    <select id="zone" style="width: 32%;font-size: 15px">
+                        <option value="区">区(县)</option>
+                    </select>
+                    <label>&nbsp;</label>
+                    <input type="text" name="password" placeholder="请输入详细地址" autocomplete="current-password" required id="id_password">
+                </div>
+                <div class="submit-row">
+                    <input type="submit" value="保存"><label>&nbsp;</label><label>&nbsp;</label><label>&nbsp;</label><label>&nbsp;</label><input type="reset" value="重置">
+                </div>
+            </form>
+        </div>
+        <br class="clear">
+    </div>
+    <!-- END Content -->
+    <div id="footer"></div>
+</div>
+<!-- END Container -->
+
+</body>
+</html>

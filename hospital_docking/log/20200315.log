@@ -1,0 +1,52 @@
+2020-03-15 22:04:33,361 apscheduler.threadpool:INFO:threadpool:__init__:MainProcess:40440:Started thread pool with 0 core threads and 20 maximum threads
+2020-03-15 22:04:33,361 apscheduler.scheduler:INFO:scheduler:add_job:MainProcess:40440:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2020-03-15 22:04:33,361 apscheduler.scheduler:INFO:scheduler:_real_add_job:MainProcess:40440:Added job "my_job (trigger: interval[0:01:00], next run at: 2020-03-15 22:05:33.361143)" to job store "default"
+2020-03-15 22:04:33,361 apscheduler.scheduler:INFO:scheduler:_main_loop:MainProcess:40440:Scheduler started
+2020-03-15 22:04:33,362 apscheduler.scheduler:DEBUG:scheduler:_main_loop:MainProcess:40440:Looking for jobs to run
+2020-03-15 22:04:33,372 apscheduler.scheduler:DEBUG:scheduler:_main_loop:MainProcess:40440:Next wakeup is due at 2020-03-15 22:05:33.361143 (in 59.988780 seconds)
+2020-03-15 22:05:33,366 apscheduler.scheduler:DEBUG:scheduler:_main_loop:MainProcess:40440:Looking for jobs to run
+2020-03-15 22:05:33,367 apscheduler.threadpool:DEBUG:threadpool:_run_jobs:MainProcess:40440:Started worker thread
+2020-03-15 22:05:33,367 apscheduler.scheduler:INFO:scheduler:_run_job:MainProcess:40440:Running job "my_job (trigger: interval[0:01:00], next run at: 2020-03-15 22:05:33.361143)" (scheduled at 2020-03-15 22:05:33.361143)
+2020-03-15 22:05:33,367 root:INFO:views:upload_prescription_job:MainProcess:40440:上传处方定时任务开始================================
+2020-03-15 22:05:33,368 apscheduler.scheduler:DEBUG:scheduler:_main_loop:MainProcess:40440:Next wakeup is due at 2020-03-15 22:06:33.361143 (in 59.994466 seconds)
+2020-03-15 22:05:33,420 root:INFO:views:get_pre_lists_by_statues:MainProcess:40440:==> executing:SELECT `mid _prescriptions`.pres_num, `mid _prescriptions`.pres_time, `mid _prescriptions`.treat_card, `mid _prescriptions`.reg_num, `mid _prescriptions`.province, `mid _prescriptions`.city, `mid _prescriptions`.zone, `mid _prescriptions`.addr_detail, `mid _prescriptions`.consignee, `mid _prescriptions`.con_tel, `mid _prescriptions`.send_goods_time, `mid _prescriptions`.user_name, `mid _prescriptions`.age, `mid _prescriptions`.gender, `mid _prescriptions`.tel, `mid _prescriptions`.is_suffering, `mid _prescriptions`.amount, `mid _prescriptions`.suffering_num, `mid _prescriptions`.ji_fried, `mid _prescriptions`.per_pack_num, `mid _prescriptions`.per_pack_dose, `mid _prescriptions`.type, `mid _prescriptions`.is_within, `mid _prescriptions`.other_pres_num, `mid _prescriptions`.special_instru, `mid _prescriptions`.bed_num, `mid _prescriptions`.hos_depart, `mid _prescriptions`.hospital_num, `mid _prescriptions`.disease_code, `mid _prescriptions`.doctor, `mid _prescriptions`.prescript_remark, `mid _prescriptions`.upload_status, `mid _prescriptions`.upload_time, `mid _prescriptions`.order_id, `mid _prescriptions`.is_hos_addr, `mid _prescriptions`.medication_methods, `mid _prescriptions`.medication_instruction, `mid _prescriptions`.source 
+FROM `mid _prescriptions` 
+WHERE `mid _prescriptions`.upload_status BETWEEN 0 AND 10000
+2020-03-15 22:05:33,448 root:INFO:views:get_pre_lists_by_statues:MainProcess:40440:==> Parameters:[]
+2020-03-15 22:05:33,448 root:INFO:views:upload_prescription_job:MainProcess:40440:本次无未上传处方！
+2020-03-15 22:05:33,455 root:INFO:models:get_local_session:MainProcess:40440:==> executing:select pc.pres_num, pc.addr_id, ca.province, ca.city, ca.zone, ca.addr_detail, ca.consignee, ca.con_tel, pc.send_goods_time, ca.is_hos_addr, pc.is_write_mid from pres_consignee pc, custom_addr ca where pc.addr_id = ca.addr_id and pc.is_write_mid = 0
+2020-03-15 22:05:33,456 root:INFO:models:get_local_session:MainProcess:40440:==> Parameters:
+2020-03-15 22:05:33,456 root:INFO:models:get_local_session:MainProcess:40440:('MZ_201907151081', 1, '云南省', '昆明市', '五华区', '万科云子6栋203', '李媛媛', '18083838104', None, 2, 0)
+2020-03-15 22:05:33,468 root:INFO:models:mysql_connect:MainProcess:40440:==> executing:select p.pres_num,p.pres_time,p.treat_card,p.reg_num,p.username,p.age,p.gender,p.tel,p.is_suffering,p.amount,p.type,p.is_within,p.is_suffering*p.amount*p.per_pack_num as suffering_num,p.per_pack_num,p.per_pack_dose,p.ji_fried,p.special_instru,p.hos_depart,p.doctor,p.remark as prescr_remark,p.medication_methods,p.medication_instruction from MZ_hosp_prescriptions_view p where p.pres_num in ('MZ_201907151081');
+2020-03-15 22:05:33,469 root:INFO:models:mysql_connect:MainProcess:40440:==> Parameters:
+2020-03-15 22:05:33,469 root:INFO:models:mysql_connect:MainProcess:40440:('MZ_201907151081', datetime.date(2019, 7, 15), '0089488', '0089488', '李菡翎', 27.0, 0.0, '18083838104', 0.0, 6.0, 0.0, 0.0, 0.0, 0.0, '0', '0', '偏执型精神分裂症', '中西医结合康复科(停用)', '杨俊伟', None, None, None)
+2020-03-15 22:05:33,477 root:INFO:models:mysql_connect:MainProcess:40440:==> executing:select pd.pres_num pdpres_num,pd.medicines,pd.dose,pd.unit,pd.goods_num,pd.dose_that,pd.remark,pd.m_usage,pd.goods_norms,pd.goods_orgin from MZ_details_view pd where pd.pres_num in ('MZ_201907151081');
+2020-03-15 22:05:33,479 root:INFO:models:mysql_connect:MainProcess:40440:==> Parameters:
+2020-03-15 22:05:33,479 root:INFO:models:mysql_connect:MainProcess:40440:('MZ_201907151081', '当归', 15.0, 'g', '8000532CY0', None, None, None, '1g', '成都康美')
+2020-03-15 22:05:33,479 root:INFO:models:mysql_connect:MainProcess:40440:('MZ_201907151081', '生地', 15.0, 'g', '8000694CY0', None, None, None, '1g', '成都康美')
+2020-03-15 22:05:33,479 root:INFO:models:mysql_connect:MainProcess:40440:('MZ_201907151081', '茯神', 20.0, 'g', '8000567CYO', None, None, None, '1g', '成都康美')
+2020-03-15 22:05:33,479 root:INFO:models:mysql_connect:MainProcess:40440:('MZ_201907151081', '远志', 20.0, 'g', '8000538CY0', None, None, None, '1g', '成都康美')
+2020-03-15 22:05:33,479 root:INFO:models:mysql_connect:MainProcess:40440:('MZ_201907151081', '五味子', 10.0, 'g', '8000534CY0', None, None, None, '1g', '成都康美')
+2020-03-15 22:05:33,479 root:INFO:models:mysql_connect:MainProcess:40440:('MZ_201907151081', '补骨脂', 20.0, 'g', '8000712CY0', None, None, None, '1g', '成都康美')
+2020-03-15 22:05:33,479 root:INFO:models:mysql_connect:MainProcess:40440:('MZ_201907151081', '栀子', 15.0, 'g', '8000519CY0', None, None, None, '1g', '成都康美')
+2020-03-15 22:05:33,479 root:INFO:models:mysql_connect:MainProcess:40440:('MZ_201907151081', '大枣', 10.0, 'g', '8000540CY0', None, None, None, '1g', '成都康美')
+2020-03-15 22:05:33,480 root:INFO:models:mysql_connect:MainProcess:40440:('MZ_201907151081', '川芎', 12.0, 'g', '8000559CY0', None, None, None, '1g', '成都康美')
+2020-03-15 22:05:33,480 root:INFO:models:mysql_connect:MainProcess:40440:('MZ_201907151081', '党参', 20.0, 'g', '8000531CY0', None, None, None, '1g', '成都康美')
+2020-03-15 22:05:33,480 root:INFO:models:mysql_connect:MainProcess:40440:('MZ_201907151081', '白术', 20.0, 'g', '8000529CY0', None, None, None, '1g', '成都康美')
+2020-03-15 22:05:33,480 root:INFO:models:mysql_connect:MainProcess:40440:('MZ_201907151081', '牡蛎', 20.0, 'g', '8000615CY0', None, None, None, '1g', '成都康美')
+2020-03-15 22:05:33,480 root:INFO:models:mysql_connect:MainProcess:40440:('MZ_201907151081', '酸枣仁', 30.0, 'g', '8000583CY0', None, None, None, '1g', '成都康美')
+2020-03-15 22:05:33,480 root:INFO:models:mysql_connect:MainProcess:40440:('MZ_201907151081', '郁金', 15.0, 'g', '800595CY0', None, None, None, '1g', '成都康美')
+2020-03-15 22:05:33,480 root:INFO:models:mysql_connect:MainProcess:40440:('MZ_201907151081', '石膏', 20.0, 'g', '8000605CY0', None, None, None, '1g', '成都康美')
+2020-03-15 22:05:33,480 root:INFO:models:mysql_connect:MainProcess:40440:('MZ_201907151081', '赤芍', 12.0, 'g', '8000556CY0', None, None, None, '1g', '成都康美')
+2020-03-15 22:05:33,480 root:INFO:models:mysql_connect:MainProcess:40440:('MZ_201907151081', '黄芪', 20.0, 'g', '8000541CY0', None, None, None, '1g', '成都康美')
+2020-03-15 22:05:33,480 root:INFO:models:mysql_connect:MainProcess:40440:('MZ_201907151081', '首乌藤', 15.0, 'g', '8000582CY0', None, None, None, '1g', '成都康美')
+2020-03-15 22:05:33,480 root:INFO:models:mysql_connect:MainProcess:40440:('MZ_201907151081', '煅磁石', 15.0, 'g', '8000802CY0', None, None, None, '1g', '成都康美')
+2020-03-15 22:05:33,480 root:INFO:models:mysql_connect:MainProcess:40440:('MZ_201907151081', '柏子仁', 20.0, 'g', '8000532CYO', None, None, None, '1g', '成都康美')
+2020-03-15 22:05:33,480 root:INFO:models:mysql_connect:MainProcess:40440:('MZ_201907151081', '牛膝', 15.0, 'g', '800596CY0', None, None, None, '1g', '成都康美')
+2020-03-15 22:05:33,481 root:INFO:models:mysql_connect:MainProcess:40440:('MZ_201907151081', '甘草', 6.0, 'g', '8000530CY0', None, None, None, '1g', '成都康美')
+2020-03-15 22:05:33,481 root:INFO:models:mysql_connect:MainProcess:40440:('MZ_201907151081', '龙骨', 20.0, 'g', '8000525CY0', None, None, None, '1g', '成都康美')
+2020-03-15 22:05:33,488 root:INFO:views:upload_prescription_job:MainProcess:40440:上传处方定时任务结束================================
+2020-03-15 22:05:33,488 apscheduler.scheduler:INFO:scheduler:_run_job:MainProcess:40440:Job "my_job (trigger: interval[0:01:00], next run at: 2020-03-15 22:06:33.361143)" executed successfully
+2020-03-15 22:05:34,490 apscheduler.threadpool:DEBUG:threadpool:_run_jobs:MainProcess:40440:Exiting worker thread
+2020-03-15 22:05:37,639 asyncio:DEBUG:selector_events:__init__:MainProcess:40440:Using selector: SelectSelector
+2020-03-15 22:05:37,640 root:INFO:threadpool:shutdown:MainProcess:40440:Shutting down thread pool

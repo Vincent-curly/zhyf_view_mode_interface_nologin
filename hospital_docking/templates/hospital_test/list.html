@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>处方列表</title>
+    <style>
+        .pres_manager {width:100%;height:100%;background: whitesmoke;margin-top: 10px}
+        .content{background-color:#e9faff}
+        .tabtop13 {width:100% ;border:0;cellspacing:1;cellpadding:5;align:center}
+        .tabtop13 td {background: #e9faff;line-height: 80%;text-align:center;}
+        .normal {background-color:#e9faff;line-height: 80%;text-align:center;}
+        .fail {background-color:#e9faff;line-height: 80%;text-align:center;color: #FF0000}
+        .standby {background-color:#e9faff;line-height: 80%;text-align:center;color: #0ed145}
+        .page_and_btn {text-align: left}
+        .page {text-align: center}
+    </style>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script type="text/javascript" src="/static/hospital_test/js/My97DatePicker/WdatePicker.js"></script>
+    <script type="text/javascript" src="/static/hospital_test/js/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="pres_manager">
+    <form action="">
+        <fieldset>
+            <legend class="title">处方管理</legend>
+            <div class="content">
+                上传状态:
+                <select id="upload_status">
+                    {% if upload_status == 0 %}
+                        <option value="all">全部</option>
+                        <option value="0">成功</option>
+                        <option value="0" selected>未上传</option>
+                    {% elif upload_status == -1 %}
+                        <option value="all">全部</option>
+                        <option value="-1" selected>成功</option>
+                        <option value="0">未上传</option>
+                    {% else %}
+                        <option value="all" selected>全部</option>
+                        <option value="-1">成功</option>
+                        <option value="0">未上传</option>
+                    {% endif %}
+                </select>
+                处方单号:
+                <input type="text" id="pres_num"  value="{{ pres_num }}"/>
+                订单号:
+                <input type="text" id="order_id" name="order_id"  value="{{ order_id }}"/>
+                患者姓名:
+                <input type="text" id="user_name" value="{{ user_name }}">
+                医生姓名:
+                <input type="text" id="doctor" value="{{ doctor }}"><br>
+                开始时间:
+                <input type="text" id="start_time" value="" class="Wdate" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',startDate:'%y-%M-%d 00:00:00'})" readonly style="width:160px;">
+                结束时间:
+                <input type="text" id="end_time" value="" class="Wdate" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',startDate:'%y-%M-%d 23:59:59'})" readonly style="width:160px;">
+                <input style="background: #0b77c2;color: white;font-size: 15px" type="button" width="40%" value="查询" id="search" onclick="pres_query()">
+            </div>
+        </fieldset>
+    </form>
+</div>
+<div class="pres_list">
+    <form>
+        <fieldset>
+        <sub style="color: #8b2767"><img src="/static/hospital_test/image/0ed145.png">&nbsp;&nbsp;&nbsp;代表未上传处方.&nbsp;&nbsp;&nbsp;<img src="/static/hospital_test/image/ff0000.png">&nbsp;&nbsp;&nbsp;代表上传失败处方</sub>
+            <table class="tabtop13">
+                <tr>
+                    <td width="8%">医院处方号</td>
+                    <td width="8%">康美订单号</td>
+                    <td width="8%">患者姓名/性别/年龄</td>
+                    <td width="10%">诊断信息</td>
+                    <td width="10%">收件人地址</td>
+                    <td width="5%">收件人</td>
+                    <td width="6%">收件人电话</td>
+                    <td width="10%">送货时间</td>
+                    <td width="10%">医院处方时间</td>
+                    <td width="3%">就诊ID</td>
+                    <td width="3%">挂单号</td>
+                    <td width="5%">开方医生</td>
+                    <td width="3%">上传状态</td>
+                </tr>
+                <tbody id="prescription_lists"></tbody>
+            <!-- django 模板传参实现
+                {% for info in pres_info %}
+                    <tr>
+                        <td width="8%">{{ info.pres_num }}</td>
+                        <td width="8%">{{ info.order_id }}</td>
+                        {% if info.gender == 0 %}
+                            <td width="8%">{{ info.user_name }}/女/{{ info.age }}</td>
+                        {% else %}
+                            <td width="8%">{{ info.user_name }}/男/{{ info.age }}</td>
+                        {% endif %}
+                        <td width="10%">{{ info.special_instru }}</td>
+                        <td width="10%">{{ info.province }}{{ info.city }}{{ info.zone }}{{ info.addr_detail }}</td>
+                        <td width="5%">{{ info.consignee }}</td>
+                        <td width="6%">{{ info.con_tel }}</td>
+                        <td width="10%">{{ info.send_goods_time }}</td>
+                        <td width="10%">{{ info.pres_time }}</td>
+                        <td width="3%">{{ info.treat_card }}</td>
+                        <td width="3%">{{ info.reg_num }}</td>
+                        <td width="5%">{{ info.doctor }}</td>
+                        {% if info.upload_status == 0 %}
+                            <td width="3%">等待上传</td>
+                        {% elif info.upload_status < 0 %}
+                            <td width="3%">成功</td>
+                        {% else %}
+                            <td width="3%">失败</td>
+                        {% endif %}
+                    </tr>
+                {% endfor %}
+                -->
+            </table>
+        </fieldset>
+    </form>
+</div>
+<div id="page_and_btn" class="page_and_btn"></div>
+<div id="page" class="page"></div>
+
+</body>
+</html>
+<script>
+    window.onload = function(){
+        pres_query();
+    }
+    function checkAndSetBacklolor() {
+        var table=document.getElementById("prescription_lists");
+        var trs=table.getElementsByTagName("tr");
+        for(var i=0;i<trs.length;i++){
+            var _tr = trs[i];
+            var status = trs[i].getElementsByTagName("td")[12].innerHTML;
+            console.log(status);
+            if(status == '待上传'){
+                console.log(trs[i]);
+                _tr.className = 'standby';
+            }
+            else if (status == '失败'){
+                _tr.className = 'fail';
+            }
+            else {
+                _tr.className = 'normal';
+            }
+        }
+    }
+    function pres_query() {
+        var upload_status = $("#upload_status option:selected").val();
+        var pres_num = $("#pres_num").val();
+        var order_id = $("#order_id").val();
+        var doctor = $("#doctor").val();
+        var user_name = $("#user_name").val();
+        var start_time = $("#start_time").val();
+        var end_time = $("#end_time").val();
+        var pres_lists = window.document.getElementById("prescription_lists");
+        var page_list = window.document.getElementById("page_and_btn");
+        var page = window.document.getElementById("page");
+        console.log(upload_status+pres_num+order_id+doctor+user_name+start_time+end_time)
+        $.ajax({
+            url:"query_prescription",
+            data:{'upload_status':upload_status,'pres_num':pres_num,'order_id':order_id,'doctor':doctor,
+                'user_name':user_name,'start_time':start_time,'end_time':end_time},
+            dataType:"text",
+            type:"POST",
+            csrfmiddlewaretoken:'{{ csrf_token  }}',
+            success:function (res) {
+                if (res){
+                    var pres_info = JSON.parse(res).slice(0,-1); //截取处方信息
+                    var page_info = JSON.parse(res).slice(-1);   //截取分页信息
+                    console.log(JSON.parse(res));
+                    console.log(pres_info);
+                    console.log(pres_info.length);
+                    console.log(page_info);
+                    console.log(page_info.length);
+                    var str = "";
+                    for (var i=0;i<pres_info.length;i++){
+                        str += "<tr>" +
+                            "<td>" + pres_info[i].pres_num + "</td>" +
+                            "<td>" + (pres_info[i].order_id ? pres_info[i].order_id : '') + "</td>" +
+                            "<td>" + pres_info[i].user_name + '/' + pres_info[i].age + '/' + (pres_info[i].gender == 0 ? '女' : '男') + "</td>" +
+                            "<td>" + pres_info[i].special_instru + "</td>" +
+                            "<td>" + pres_info[i].addr_detail + "</td>" +
+                            "<td>" + pres_info[i].consignee + "</td>" +
+                            "<td>" + pres_info[i].con_tel + "</td>" +
+                            "<td>" + (pres_info[i].send_goods_time ? pres_info[i].send_goods_time : '') + "</td>" +
+                            "<td>" + pres_info[i].pres_time + "</td>" +
+                            "<td>" + pres_info[i].treat_card + "</td>" +
+                            "<td>" + pres_info[i].reg_num + "</td>" +
+                            "<td>" + pres_info[i].doctor + "</td>" +
+                            "<td>" + (pres_info[i].upload_status == -1 ? '成功' : pres_info[i].upload_status == 0 ? '待上传' : '失败') + "</td>" +
+                            "</tr>";
+                        }
+                    var page_str = "显示第";
+                    page_str += page_info[0].current_page_num * 10 - 9 + "至" + page_info[0].current_page_num * 10 + "项记录,共" + page_info[0].total_rows + "项";
+                    pres_lists.innerHTML = str;
+                    page_list.innerHTML = page_str;
+                    page.innerHTML = page_info[0].page_html;
+                    checkAndSetBacklolor();
+                    }
+            }
+        });
+    }
+</script>

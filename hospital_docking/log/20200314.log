@@ -1,0 +1,249 @@
+2020-03-14 16:52:47,401 asyncio:DEBUG:selector_events:__init__:MainProcess:12124:Using selector: SelectSelector
+2020-03-14 17:06:29,028 asyncio:DEBUG:selector_events:__init__:MainProcess:7612:Using selector: SelectSelector
+2020-03-14 17:14:39,309 sqlalchemy.pool.impl.QueuePool:DEBUG:base:__connect:MainProcess:19360:Created new connection <mysql.connector.connection.MySQLConnection object at 0x00000251CF07B9E8>
+2020-03-14 17:14:39,309 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:19360:SHOW VARIABLES LIKE 'sql_mode'
+2020-03-14 17:14:39,310 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:19360:{}
+2020-03-14 17:14:39,329 sqlalchemy.engine.base.Engine:DEBUG:result:_init_metadata:MainProcess:19360:Col ('Variable_name', 'Value')
+2020-03-14 17:14:39,329 sqlalchemy.engine.base.Engine:DEBUG:result:process_rows:MainProcess:19360:Row ('sql_mode', 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION')
+2020-03-14 17:14:39,330 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:19360:SHOW VARIABLES LIKE 'lower_case_table_names'
+2020-03-14 17:14:39,330 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:19360:{}
+2020-03-14 17:14:39,331 sqlalchemy.engine.base.Engine:DEBUG:result:_init_metadata:MainProcess:19360:Col ('Variable_name', 'Value')
+2020-03-14 17:14:39,331 sqlalchemy.engine.base.Engine:DEBUG:result:process_rows:MainProcess:19360:Row ('lower_case_table_names', '1')
+2020-03-14 17:14:39,334 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:19360:SELECT DATABASE()
+2020-03-14 17:14:39,334 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:19360:{}
+2020-03-14 17:14:39,335 sqlalchemy.engine.base.Engine:DEBUG:result:_init_metadata:MainProcess:19360:Col ('DATABASE()',)
+2020-03-14 17:14:39,335 sqlalchemy.engine.base.Engine:DEBUG:result:process_rows:MainProcess:19360:Row ('zhyf_host',)
+2020-03-14 17:14:39,336 sqlalchemy.engine.base.Engine:INFO:base:_cursor_execute:MainProcess:19360:SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2020-03-14 17:14:39,336 sqlalchemy.engine.base.Engine:INFO:base:_cursor_execute:MainProcess:19360:{}
+2020-03-14 17:14:39,338 sqlalchemy.engine.base.Engine:INFO:base:_cursor_execute:MainProcess:19360:SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2020-03-14 17:14:39,338 sqlalchemy.engine.base.Engine:INFO:base:_cursor_execute:MainProcess:19360:{}
+2020-03-14 17:14:39,338 sqlalchemy.pool.impl.QueuePool:DEBUG:base:checkout:MainProcess:19360:Connection <mysql.connector.connection.MySQLConnection object at 0x00000251CF07B9E8> checked out from pool
+2020-03-14 17:14:39,338 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:19360:DESCRIBE `pres_consignee`
+2020-03-14 17:14:39,339 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:19360:{}
+2020-03-14 17:14:39,355 sqlalchemy.engine.base.Engine:DEBUG:result:_init_metadata:MainProcess:19360:Col ('Field', 'Type', 'Null', 'Key', 'Default', 'Extra')
+2020-03-14 17:14:39,355 sqlalchemy.engine.base.Engine:DEBUG:result:process_rows:MainProcess:19360:Row ('pres_num', 'varchar(50)', 'NO', 'PRI', None, '')
+2020-03-14 17:14:39,356 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:19360:DESCRIBE `mid _prescriptions`
+2020-03-14 17:14:39,356 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:19360:{}
+2020-03-14 17:14:39,357 sqlalchemy.engine.base.Engine:DEBUG:result:_init_metadata:MainProcess:19360:Col ('Field', 'Type', 'Null', 'Key', 'Default', 'Extra')
+2020-03-14 17:14:39,357 sqlalchemy.engine.base.Engine:DEBUG:result:process_rows:MainProcess:19360:Row ('pres_num', 'varchar(50)', 'NO', 'PRI', None, '')
+2020-03-14 17:14:39,358 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:19360:DESCRIBE `mid_prescription_details`
+2020-03-14 17:14:39,358 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:19360:{}
+2020-03-14 17:14:39,359 sqlalchemy.engine.base.Engine:DEBUG:result:_init_metadata:MainProcess:19360:Col ('Field', 'Type', 'Null', 'Key', 'Default', 'Extra')
+2020-03-14 17:14:39,359 sqlalchemy.engine.base.Engine:DEBUG:result:process_rows:MainProcess:19360:Row ('pres_num', 'varchar(36)', 'NO', 'PRI', None, '')
+2020-03-14 17:14:39,359 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:19360:DESCRIBE `custom_addr`
+2020-03-14 17:14:39,359 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:19360:{}
+2020-03-14 17:14:39,360 sqlalchemy.engine.base.Engine:DEBUG:result:_init_metadata:MainProcess:19360:Col ('Field', 'Type', 'Null', 'Key', 'Default', 'Extra')
+2020-03-14 17:14:39,360 sqlalchemy.engine.base.Engine:DEBUG:result:process_rows:MainProcess:19360:Row ('addr_id', 'int(11)', 'NO', 'PRI', None, 'auto_increment')
+2020-03-14 17:14:39,360 sqlalchemy.pool.impl.QueuePool:DEBUG:base:_finalize_fairy:MainProcess:19360:Connection <mysql.connector.connection.MySQLConnection object at 0x00000251CF07B9E8> being returned to pool
+2020-03-14 17:14:39,360 sqlalchemy.pool.impl.QueuePool:DEBUG:base:_reset:MainProcess:19360:Connection <mysql.connector.connection.MySQLConnection object at 0x00000251CF07B9E8> rollback-on-return
+2020-03-14 17:14:39,362 sqlalchemy.pool.impl.QueuePool:DEBUG:base:__connect:MainProcess:19360:Created new connection <mysql.connector.connection.MySQLConnection object at 0x00000251CF0A0CC0>
+2020-03-14 17:14:39,363 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:19360:SHOW VARIABLES LIKE 'sql_mode'
+2020-03-14 17:14:39,363 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:19360:{}
+2020-03-14 17:14:39,364 sqlalchemy.engine.base.Engine:DEBUG:result:_init_metadata:MainProcess:19360:Col ('Variable_name', 'Value')
+2020-03-14 17:14:39,364 sqlalchemy.engine.base.Engine:DEBUG:result:process_rows:MainProcess:19360:Row ('sql_mode', 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION')
+2020-03-14 17:14:39,364 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:19360:SHOW VARIABLES LIKE 'lower_case_table_names'
+2020-03-14 17:14:39,364 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:19360:{}
+2020-03-14 17:14:39,365 sqlalchemy.engine.base.Engine:DEBUG:result:_init_metadata:MainProcess:19360:Col ('Variable_name', 'Value')
+2020-03-14 17:14:39,365 sqlalchemy.engine.base.Engine:DEBUG:result:process_rows:MainProcess:19360:Row ('lower_case_table_names', '1')
+2020-03-14 17:14:39,366 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:19360:SELECT DATABASE()
+2020-03-14 17:14:39,366 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:19360:{}
+2020-03-14 17:14:39,366 sqlalchemy.engine.base.Engine:DEBUG:result:_init_metadata:MainProcess:19360:Col ('DATABASE()',)
+2020-03-14 17:14:39,366 sqlalchemy.engine.base.Engine:DEBUG:result:process_rows:MainProcess:19360:Row ('addr_test',)
+2020-03-14 17:14:39,367 sqlalchemy.engine.base.Engine:INFO:base:_cursor_execute:MainProcess:19360:SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2020-03-14 17:14:39,367 sqlalchemy.engine.base.Engine:INFO:base:_cursor_execute:MainProcess:19360:{}
+2020-03-14 17:14:39,367 sqlalchemy.engine.base.Engine:INFO:base:_cursor_execute:MainProcess:19360:SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2020-03-14 17:14:39,368 sqlalchemy.engine.base.Engine:INFO:base:_cursor_execute:MainProcess:19360:{}
+2020-03-14 17:14:39,368 sqlalchemy.pool.impl.QueuePool:DEBUG:base:checkout:MainProcess:19360:Connection <mysql.connector.connection.MySQLConnection object at 0x00000251CF0A0CC0> checked out from pool
+2020-03-14 17:14:39,368 root:INFO:models:mysql_connect:MainProcess:19360:==> executing:select p.treat_card,p.username,p.tel from MZ_hosp_prescriptions_view p where p.pres_num ='MZ_201905203324'and p.treat_card ='0565188';
+2020-03-14 17:14:39,371 root:INFO:models:mysql_connect:MainProcess:19360:==> Parameters:[["0565188", "张丽仙", "15887841947"]]
+2020-03-14 17:14:39,372 sqlalchemy.pool.impl.QueuePool:DEBUG:base:_finalize_fairy:MainProcess:19360:Connection <mysql.connector.connection.MySQLConnection object at 0x00000251CF0A0CC0> being returned to pool
+2020-03-14 17:14:39,372 sqlalchemy.pool.impl.QueuePool:DEBUG:base:_reset:MainProcess:19360:Connection <mysql.connector.connection.MySQLConnection object at 0x00000251CF0A0CC0> rollback-on-return
+2020-03-14 17:14:39,379 sqlalchemy.pool.impl.QueuePool:DEBUG:base:__connect:MainProcess:19360:Created new connection <mysql.connector.connection.MySQLConnection object at 0x00000251CF0C5390>
+2020-03-14 17:14:39,380 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:19360:SHOW VARIABLES LIKE 'sql_mode'
+2020-03-14 17:14:39,380 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:19360:{}
+2020-03-14 17:14:39,381 sqlalchemy.engine.base.Engine:DEBUG:result:_init_metadata:MainProcess:19360:Col ('Variable_name', 'Value')
+2020-03-14 17:14:39,381 sqlalchemy.engine.base.Engine:DEBUG:result:process_rows:MainProcess:19360:Row ('sql_mode', 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION')
+2020-03-14 17:14:39,381 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:19360:SHOW VARIABLES LIKE 'lower_case_table_names'
+2020-03-14 17:14:39,381 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:19360:{}
+2020-03-14 17:14:39,383 sqlalchemy.engine.base.Engine:DEBUG:result:_init_metadata:MainProcess:19360:Col ('Variable_name', 'Value')
+2020-03-14 17:14:39,383 sqlalchemy.engine.base.Engine:DEBUG:result:process_rows:MainProcess:19360:Row ('lower_case_table_names', '1')
+2020-03-14 17:14:39,383 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:19360:SELECT DATABASE()
+2020-03-14 17:14:39,383 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:19360:{}
+2020-03-14 17:14:39,383 sqlalchemy.engine.base.Engine:DEBUG:result:_init_metadata:MainProcess:19360:Col ('DATABASE()',)
+2020-03-14 17:14:39,383 sqlalchemy.engine.base.Engine:DEBUG:result:process_rows:MainProcess:19360:Row ('zhyf_host',)
+2020-03-14 17:14:39,384 sqlalchemy.engine.base.Engine:INFO:base:_cursor_execute:MainProcess:19360:SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2020-03-14 17:14:39,384 sqlalchemy.engine.base.Engine:INFO:base:_cursor_execute:MainProcess:19360:{}
+2020-03-14 17:14:39,385 sqlalchemy.engine.base.Engine:INFO:base:_cursor_execute:MainProcess:19360:SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2020-03-14 17:14:39,385 sqlalchemy.engine.base.Engine:INFO:base:_cursor_execute:MainProcess:19360:{}
+2020-03-14 17:14:39,385 sqlalchemy.pool.impl.QueuePool:DEBUG:base:checkout:MainProcess:19360:Connection <mysql.connector.connection.MySQLConnection object at 0x00000251CF0C5390> checked out from pool
+2020-03-14 17:14:39,385 sqlalchemy.engine.base.Engine:INFO:base:_begin_impl:MainProcess:19360:BEGIN (implicit)
+2020-03-14 17:14:39,386 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:19360:SELECT custom_addr.addr_id AS custom_addr_addr_id, custom_addr.custom_num AS custom_addr_custom_num, custom_addr.consignee AS custom_addr_consignee, custom_addr.con_tel AS custom_addr_con_tel, custom_addr.province AS custom_addr_province, custom_addr.city AS custom_addr_city, custom_addr.zone AS custom_addr_zone, custom_addr.addr_detail AS custom_addr_addr_detail, custom_addr.is_hos_addr AS custom_addr_is_hos_addr, custom_addr.auto_state AS custom_addr_auto_state 
+FROM custom_addr 
+WHERE custom_addr.custom_num = %(custom_num_1)s ORDER BY custom_addr.addr_id
+2020-03-14 17:14:39,386 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:19360:{'custom_num_1': '0565188'}
+2020-03-14 17:14:39,387 sqlalchemy.engine.base.Engine:DEBUG:result:_init_metadata:MainProcess:19360:Col ('custom_addr_addr_id', 'custom_addr_custom_num', 'custom_addr_consignee', 'custom_addr_con_tel', 'custom_addr_province', 'custom_addr_city', 'custom_addr_zone', 'custom_addr_addr_detail', 'custom_addr_is_hos_addr', 'custom_addr_auto_state')
+2020-03-14 17:14:39,387 sqlalchemy.engine.base.Engine:DEBUG:result:process_rows:MainProcess:19360:Row (10, '0565188', '昆明市第三人民医院', '0871-63543252', '云南省', '市', '区', '云南省昆明市盘龙区吴井路319号', 1, 1)
+2020-03-14 17:14:39,388 sqlalchemy.engine.base.Engine:DEBUG:result:process_rows:MainProcess:19360:Row (11, '0565188', '昆明市第三人民医院', '0871-63543252', '云南省', '市', '区', '云南省昆明市盘龙区吴井路319号感染科15床', 1, 1)
+2020-03-14 17:14:39,388 sqlalchemy.pool.impl.QueuePool:DEBUG:base:_finalize_fairy:MainProcess:19360:Connection <mysql.connector.connection.MySQLConnection object at 0x00000251CF0C5390> being returned to pool
+2020-03-14 17:14:39,388 sqlalchemy.pool.impl.QueuePool:DEBUG:base:_reset:MainProcess:19360:Connection <mysql.connector.connection.MySQLConnection object at 0x00000251CF0C5390> rollback-on-return, via agent
+2020-03-14 17:14:39,389 sqlalchemy.engine.base.Engine:INFO:base:_rollback_impl:MainProcess:19360:ROLLBACK
+2020-03-14 17:14:39,389 root:INFO:views:entry_addr:MainProcess:19360:{'treat_card': '0565188', 'username': '张丽仙', 'tel': '15887841947', 'pres_num': 'MZ_201905203324', 'custom_num': '0565188', 'addr_lists': [<hospital_test.models.Address object at 0x00000251CF0F7208>, <hospital_test.models.Address object at 0x00000251CF0F7240>]}
+2020-03-14 17:14:39,391 sqlalchemy.pool.impl.QueuePool:DEBUG:base:__connect:MainProcess:19360:Created new connection <mysql.connector.connection.MySQLConnection object at 0x00000251CF0F76D8>
+2020-03-14 17:14:39,391 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:19360:SHOW VARIABLES LIKE 'sql_mode'
+2020-03-14 17:14:39,391 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:19360:{}
+2020-03-14 17:14:39,393 sqlalchemy.engine.base.Engine:DEBUG:result:_init_metadata:MainProcess:19360:Col ('Variable_name', 'Value')
+2020-03-14 17:14:39,393 sqlalchemy.engine.base.Engine:DEBUG:result:process_rows:MainProcess:19360:Row ('sql_mode', 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION')
+2020-03-14 17:14:39,393 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:19360:SHOW VARIABLES LIKE 'lower_case_table_names'
+2020-03-14 17:14:39,393 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:19360:{}
+2020-03-14 17:14:39,394 sqlalchemy.engine.base.Engine:DEBUG:result:_init_metadata:MainProcess:19360:Col ('Variable_name', 'Value')
+2020-03-14 17:14:39,394 sqlalchemy.engine.base.Engine:DEBUG:result:process_rows:MainProcess:19360:Row ('lower_case_table_names', '1')
+2020-03-14 17:14:39,394 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:19360:SELECT DATABASE()
+2020-03-14 17:14:39,395 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:19360:{}
+2020-03-14 17:14:39,395 sqlalchemy.engine.base.Engine:DEBUG:result:_init_metadata:MainProcess:19360:Col ('DATABASE()',)
+2020-03-14 17:14:39,395 sqlalchemy.engine.base.Engine:DEBUG:result:process_rows:MainProcess:19360:Row ('zhyf_host',)
+2020-03-14 17:14:39,395 sqlalchemy.engine.base.Engine:INFO:base:_cursor_execute:MainProcess:19360:SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2020-03-14 17:14:39,395 sqlalchemy.engine.base.Engine:INFO:base:_cursor_execute:MainProcess:19360:{}
+2020-03-14 17:14:39,396 sqlalchemy.engine.base.Engine:INFO:base:_cursor_execute:MainProcess:19360:SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2020-03-14 17:14:39,396 sqlalchemy.engine.base.Engine:INFO:base:_cursor_execute:MainProcess:19360:{}
+2020-03-14 17:14:39,396 sqlalchemy.pool.impl.QueuePool:DEBUG:base:checkout:MainProcess:19360:Connection <mysql.connector.connection.MySQLConnection object at 0x00000251CF0F76D8> checked out from pool
+2020-03-14 17:14:39,396 sqlalchemy.engine.base.Engine:INFO:base:_begin_impl:MainProcess:19360:BEGIN (implicit)
+2020-03-14 17:14:39,397 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:19360:SELECT pres_consignee.pres_num AS pres_consignee_pres_num, pres_consignee.addr_id AS pres_consignee_addr_id, pres_consignee.send_goods_time AS pres_consignee_send_goods_time, pres_consignee.is_write_mid AS pres_consignee_is_write_mid 
+FROM pres_consignee 
+WHERE pres_consignee.pres_num = %(pres_num_1)s
+2020-03-14 17:14:39,397 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:19360:{'pres_num_1': 'MZ_201905203324'}
+2020-03-14 17:14:39,398 sqlalchemy.engine.base.Engine:DEBUG:result:_init_metadata:MainProcess:19360:Col ('pres_consignee_pres_num', 'pres_consignee_addr_id', 'pres_consignee_send_goods_time', 'pres_consignee_is_write_mid')
+2020-03-14 17:14:39,398 sqlalchemy.engine.base.Engine:DEBUG:result:process_rows:MainProcess:19360:Row ('MZ_201905203324', 10, None, 0)
+2020-03-14 17:14:39,398 sqlalchemy.pool.impl.QueuePool:DEBUG:base:_finalize_fairy:MainProcess:19360:Connection <mysql.connector.connection.MySQLConnection object at 0x00000251CF0F76D8> being returned to pool
+2020-03-14 17:14:39,398 sqlalchemy.pool.impl.QueuePool:DEBUG:base:_reset:MainProcess:19360:Connection <mysql.connector.connection.MySQLConnection object at 0x00000251CF0F76D8> rollback-on-return, via agent
+2020-03-14 17:14:39,398 sqlalchemy.engine.base.Engine:INFO:base:_rollback_impl:MainProcess:19360:ROLLBACK
+2020-03-14 17:14:39,398 root:INFO:views:entry_addr:MainProcess:19360:{'treat_card': '0565188', 'username': '张丽仙', 'tel': '15887841947', 'pres_num': 'MZ_201905203324', 'custom_num': '0565188', 'addr_lists': [<hospital_test.models.Address object at 0x00000251CF0F7208>, <hospital_test.models.Address object at 0x00000251CF0F7240>], 'pres_addr_info': [<hospital_test.models.Consignee object at 0x00000251CF0F7FD0>]}
+2020-03-14 17:24:47,783 asyncio:DEBUG:selector_events:__init__:MainProcess:19360:Using selector: SelectSelector
+2020-03-14 17:27:26,810 asyncio:DEBUG:selector_events:__init__:MainProcess:15836:Using selector: SelectSelector
+2020-03-14 17:27:40,715 asyncio:DEBUG:selector_events:__init__:MainProcess:4816:Using selector: SelectSelector
+2020-03-14 17:28:35,669 asyncio:DEBUG:selector_events:__init__:MainProcess:18616:Using selector: SelectSelector
+2020-03-14 17:28:57,512 sqlalchemy.pool.impl.QueuePool:DEBUG:base:__connect:MainProcess:1548:Created new connection <mysql.connector.connection.MySQLConnection object at 0x000001D7C4928BE0>
+2020-03-14 17:28:57,513 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:1548:SHOW VARIABLES LIKE 'sql_mode'
+2020-03-14 17:28:57,513 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:1548:{}
+2020-03-14 17:28:57,515 sqlalchemy.engine.base.Engine:DEBUG:result:_init_metadata:MainProcess:1548:Col ('Variable_name', 'Value')
+2020-03-14 17:28:57,515 sqlalchemy.engine.base.Engine:DEBUG:result:process_rows:MainProcess:1548:Row ('sql_mode', 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION')
+2020-03-14 17:28:57,515 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:1548:SHOW VARIABLES LIKE 'lower_case_table_names'
+2020-03-14 17:28:57,516 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:1548:{}
+2020-03-14 17:28:57,517 sqlalchemy.engine.base.Engine:DEBUG:result:_init_metadata:MainProcess:1548:Col ('Variable_name', 'Value')
+2020-03-14 17:28:57,517 sqlalchemy.engine.base.Engine:DEBUG:result:process_rows:MainProcess:1548:Row ('lower_case_table_names', '1')
+2020-03-14 17:28:57,517 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:1548:SELECT DATABASE()
+2020-03-14 17:28:57,518 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:1548:{}
+2020-03-14 17:28:57,518 sqlalchemy.engine.base.Engine:DEBUG:result:_init_metadata:MainProcess:1548:Col ('DATABASE()',)
+2020-03-14 17:28:57,518 sqlalchemy.engine.base.Engine:DEBUG:result:process_rows:MainProcess:1548:Row ('zhyf_host',)
+2020-03-14 17:28:57,518 sqlalchemy.engine.base.Engine:INFO:base:_cursor_execute:MainProcess:1548:SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2020-03-14 17:28:57,518 sqlalchemy.engine.base.Engine:INFO:base:_cursor_execute:MainProcess:1548:{}
+2020-03-14 17:28:57,519 sqlalchemy.engine.base.Engine:INFO:base:_cursor_execute:MainProcess:1548:SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2020-03-14 17:28:57,519 sqlalchemy.engine.base.Engine:INFO:base:_cursor_execute:MainProcess:1548:{}
+2020-03-14 17:28:57,519 sqlalchemy.pool.impl.QueuePool:DEBUG:base:checkout:MainProcess:1548:Connection <mysql.connector.connection.MySQLConnection object at 0x000001D7C4928BE0> checked out from pool
+2020-03-14 17:28:57,520 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:1548:DESCRIBE `pres_consignee`
+2020-03-14 17:28:57,520 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:1548:{}
+2020-03-14 17:28:57,521 sqlalchemy.engine.base.Engine:DEBUG:result:_init_metadata:MainProcess:1548:Col ('Field', 'Type', 'Null', 'Key', 'Default', 'Extra')
+2020-03-14 17:28:57,521 sqlalchemy.engine.base.Engine:DEBUG:result:process_rows:MainProcess:1548:Row ('pres_num', 'varchar(50)', 'NO', 'PRI', None, '')
+2020-03-14 17:28:57,521 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:1548:DESCRIBE `mid _prescriptions`
+2020-03-14 17:28:57,521 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:1548:{}
+2020-03-14 17:28:57,522 sqlalchemy.engine.base.Engine:DEBUG:result:_init_metadata:MainProcess:1548:Col ('Field', 'Type', 'Null', 'Key', 'Default', 'Extra')
+2020-03-14 17:28:57,522 sqlalchemy.engine.base.Engine:DEBUG:result:process_rows:MainProcess:1548:Row ('pres_num', 'varchar(50)', 'NO', 'PRI', None, '')
+2020-03-14 17:28:57,522 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:1548:DESCRIBE `mid_prescription_details`
+2020-03-14 17:28:57,522 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:1548:{}
+2020-03-14 17:28:57,523 sqlalchemy.engine.base.Engine:DEBUG:result:_init_metadata:MainProcess:1548:Col ('Field', 'Type', 'Null', 'Key', 'Default', 'Extra')
+2020-03-14 17:28:57,523 sqlalchemy.engine.base.Engine:DEBUG:result:process_rows:MainProcess:1548:Row ('pres_num', 'varchar(36)', 'NO', 'PRI', None, '')
+2020-03-14 17:28:57,523 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:1548:DESCRIBE `custom_addr`
+2020-03-14 17:28:57,523 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:1548:{}
+2020-03-14 17:28:57,524 sqlalchemy.engine.base.Engine:DEBUG:result:_init_metadata:MainProcess:1548:Col ('Field', 'Type', 'Null', 'Key', 'Default', 'Extra')
+2020-03-14 17:28:57,524 sqlalchemy.engine.base.Engine:DEBUG:result:process_rows:MainProcess:1548:Row ('addr_id', 'int(11)', 'NO', 'PRI', None, 'auto_increment')
+2020-03-14 17:28:57,524 sqlalchemy.pool.impl.QueuePool:DEBUG:base:_finalize_fairy:MainProcess:1548:Connection <mysql.connector.connection.MySQLConnection object at 0x000001D7C4928BE0> being returned to pool
+2020-03-14 17:28:57,524 sqlalchemy.pool.impl.QueuePool:DEBUG:base:_reset:MainProcess:1548:Connection <mysql.connector.connection.MySQLConnection object at 0x000001D7C4928BE0> rollback-on-return
+2020-03-14 17:28:57,526 sqlalchemy.pool.impl.QueuePool:DEBUG:base:__connect:MainProcess:1548:Created new connection <mysql.connector.connection.MySQLConnection object at 0x000001D7C4948C50>
+2020-03-14 17:28:57,527 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:1548:SHOW VARIABLES LIKE 'sql_mode'
+2020-03-14 17:28:57,527 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:1548:{}
+2020-03-14 17:28:57,528 sqlalchemy.engine.base.Engine:DEBUG:result:_init_metadata:MainProcess:1548:Col ('Variable_name', 'Value')
+2020-03-14 17:28:57,528 sqlalchemy.engine.base.Engine:DEBUG:result:process_rows:MainProcess:1548:Row ('sql_mode', 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION')
+2020-03-14 17:28:57,528 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:1548:SHOW VARIABLES LIKE 'lower_case_table_names'
+2020-03-14 17:28:57,528 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:1548:{}
+2020-03-14 17:28:57,529 sqlalchemy.engine.base.Engine:DEBUG:result:_init_metadata:MainProcess:1548:Col ('Variable_name', 'Value')
+2020-03-14 17:28:57,529 sqlalchemy.engine.base.Engine:DEBUG:result:process_rows:MainProcess:1548:Row ('lower_case_table_names', '1')
+2020-03-14 17:28:57,529 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:1548:SELECT DATABASE()
+2020-03-14 17:28:57,529 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:1548:{}
+2020-03-14 17:28:57,530 sqlalchemy.engine.base.Engine:DEBUG:result:_init_metadata:MainProcess:1548:Col ('DATABASE()',)
+2020-03-14 17:28:57,530 sqlalchemy.engine.base.Engine:DEBUG:result:process_rows:MainProcess:1548:Row ('addr_test',)
+2020-03-14 17:28:57,530 sqlalchemy.engine.base.Engine:INFO:base:_cursor_execute:MainProcess:1548:SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2020-03-14 17:28:57,531 sqlalchemy.engine.base.Engine:INFO:base:_cursor_execute:MainProcess:1548:{}
+2020-03-14 17:28:57,531 sqlalchemy.engine.base.Engine:INFO:base:_cursor_execute:MainProcess:1548:SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2020-03-14 17:28:57,531 sqlalchemy.engine.base.Engine:INFO:base:_cursor_execute:MainProcess:1548:{}
+2020-03-14 17:28:57,531 sqlalchemy.pool.impl.QueuePool:DEBUG:base:checkout:MainProcess:1548:Connection <mysql.connector.connection.MySQLConnection object at 0x000001D7C4948C50> checked out from pool
+2020-03-14 17:28:57,532 root:INFO:models:mysql_connect:MainProcess:1548:==> executing:select p.treat_card,p.username,p.tel from MZ_hosp_prescriptions_view p where p.pres_num ='MZ_201905203324'and p.treat_card ='0565188';
+2020-03-14 17:28:57,532 root:INFO:models:mysql_connect:MainProcess:1548:==> Parameters:[["0565188", "张丽仙", "15887841947"]]
+2020-03-14 17:28:57,532 sqlalchemy.pool.impl.QueuePool:DEBUG:base:_finalize_fairy:MainProcess:1548:Connection <mysql.connector.connection.MySQLConnection object at 0x000001D7C4948C50> being returned to pool
+2020-03-14 17:28:57,532 sqlalchemy.pool.impl.QueuePool:DEBUG:base:_reset:MainProcess:1548:Connection <mysql.connector.connection.MySQLConnection object at 0x000001D7C4948C50> rollback-on-return
+2020-03-14 17:28:57,537 sqlalchemy.pool.impl.QueuePool:DEBUG:base:__connect:MainProcess:1548:Created new connection <mysql.connector.connection.MySQLConnection object at 0x000001D7C4978320>
+2020-03-14 17:28:57,538 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:1548:SHOW VARIABLES LIKE 'sql_mode'
+2020-03-14 17:28:57,538 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:1548:{}
+2020-03-14 17:28:57,539 sqlalchemy.engine.base.Engine:DEBUG:result:_init_metadata:MainProcess:1548:Col ('Variable_name', 'Value')
+2020-03-14 17:28:57,539 sqlalchemy.engine.base.Engine:DEBUG:result:process_rows:MainProcess:1548:Row ('sql_mode', 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION')
+2020-03-14 17:28:57,539 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:1548:SHOW VARIABLES LIKE 'lower_case_table_names'
+2020-03-14 17:28:57,539 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:1548:{}
+2020-03-14 17:28:57,540 sqlalchemy.engine.base.Engine:DEBUG:result:_init_metadata:MainProcess:1548:Col ('Variable_name', 'Value')
+2020-03-14 17:28:57,540 sqlalchemy.engine.base.Engine:DEBUG:result:process_rows:MainProcess:1548:Row ('lower_case_table_names', '1')
+2020-03-14 17:28:57,541 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:1548:SELECT DATABASE()
+2020-03-14 17:28:57,541 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:1548:{}
+2020-03-14 17:28:57,541 sqlalchemy.engine.base.Engine:DEBUG:result:_init_metadata:MainProcess:1548:Col ('DATABASE()',)
+2020-03-14 17:28:57,541 sqlalchemy.engine.base.Engine:DEBUG:result:process_rows:MainProcess:1548:Row ('zhyf_host',)
+2020-03-14 17:28:57,542 sqlalchemy.engine.base.Engine:INFO:base:_cursor_execute:MainProcess:1548:SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2020-03-14 17:28:57,542 sqlalchemy.engine.base.Engine:INFO:base:_cursor_execute:MainProcess:1548:{}
+2020-03-14 17:28:57,542 sqlalchemy.engine.base.Engine:INFO:base:_cursor_execute:MainProcess:1548:SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2020-03-14 17:28:57,542 sqlalchemy.engine.base.Engine:INFO:base:_cursor_execute:MainProcess:1548:{}
+2020-03-14 17:28:57,543 sqlalchemy.pool.impl.QueuePool:DEBUG:base:checkout:MainProcess:1548:Connection <mysql.connector.connection.MySQLConnection object at 0x000001D7C4978320> checked out from pool
+2020-03-14 17:28:57,543 sqlalchemy.engine.base.Engine:INFO:base:_begin_impl:MainProcess:1548:BEGIN (implicit)
+2020-03-14 17:28:57,543 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:1548:SELECT custom_addr.addr_id AS custom_addr_addr_id, custom_addr.custom_num AS custom_addr_custom_num, custom_addr.consignee AS custom_addr_consignee, custom_addr.con_tel AS custom_addr_con_tel, custom_addr.province AS custom_addr_province, custom_addr.city AS custom_addr_city, custom_addr.zone AS custom_addr_zone, custom_addr.addr_detail AS custom_addr_addr_detail, custom_addr.is_hos_addr AS custom_addr_is_hos_addr, custom_addr.auto_state AS custom_addr_auto_state 
+FROM custom_addr 
+WHERE custom_addr.custom_num = %(custom_num_1)s ORDER BY custom_addr.addr_id
+2020-03-14 17:28:57,544 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:1548:{'custom_num_1': '0565188'}
+2020-03-14 17:28:57,544 sqlalchemy.engine.base.Engine:DEBUG:result:_init_metadata:MainProcess:1548:Col ('custom_addr_addr_id', 'custom_addr_custom_num', 'custom_addr_consignee', 'custom_addr_con_tel', 'custom_addr_province', 'custom_addr_city', 'custom_addr_zone', 'custom_addr_addr_detail', 'custom_addr_is_hos_addr', 'custom_addr_auto_state')
+2020-03-14 17:28:57,544 sqlalchemy.engine.base.Engine:DEBUG:result:process_rows:MainProcess:1548:Row (10, '0565188', '昆明市第三人民医院', '0871-63543252', '云南省', '市', '区', '云南省昆明市盘龙区吴井路319号', 1, 1)
+2020-03-14 17:28:57,544 sqlalchemy.engine.base.Engine:DEBUG:result:process_rows:MainProcess:1548:Row (11, '0565188', '昆明市第三人民医院', '0871-63543252', '云南省', '市', '区', '云南省昆明市盘龙区吴井路319号感染科15床', 1, 1)
+2020-03-14 17:28:57,545 sqlalchemy.pool.impl.QueuePool:DEBUG:base:_finalize_fairy:MainProcess:1548:Connection <mysql.connector.connection.MySQLConnection object at 0x000001D7C4978320> being returned to pool
+2020-03-14 17:28:57,545 sqlalchemy.pool.impl.QueuePool:DEBUG:base:_reset:MainProcess:1548:Connection <mysql.connector.connection.MySQLConnection object at 0x000001D7C4978320> rollback-on-return, via agent
+2020-03-14 17:28:57,545 sqlalchemy.engine.base.Engine:INFO:base:_rollback_impl:MainProcess:1548:ROLLBACK
+2020-03-14 17:28:57,545 root:INFO:views:entry_addr:MainProcess:1548:{'treat_card': '0565188', 'username': '张丽仙', 'tel': '15887841947', 'pres_num': 'MZ_201905203324', 'custom_num': '0565188', 'addr_lists': [<hospital_test.models.Address object at 0x000001D7C49A8198>, <hospital_test.models.Address object at 0x000001D7C49A81D0>]}
+2020-03-14 17:28:57,548 sqlalchemy.pool.impl.QueuePool:DEBUG:base:__connect:MainProcess:1548:Created new connection <mysql.connector.connection.MySQLConnection object at 0x000001D7C49A8668>
+2020-03-14 17:28:57,548 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:1548:SHOW VARIABLES LIKE 'sql_mode'
+2020-03-14 17:28:57,548 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:1548:{}
+2020-03-14 17:28:57,549 sqlalchemy.engine.base.Engine:DEBUG:result:_init_metadata:MainProcess:1548:Col ('Variable_name', 'Value')
+2020-03-14 17:28:57,549 sqlalchemy.engine.base.Engine:DEBUG:result:process_rows:MainProcess:1548:Row ('sql_mode', 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION')
+2020-03-14 17:28:57,550 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:1548:SHOW VARIABLES LIKE 'lower_case_table_names'
+2020-03-14 17:28:57,550 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:1548:{}
+2020-03-14 17:28:57,551 sqlalchemy.engine.base.Engine:DEBUG:result:_init_metadata:MainProcess:1548:Col ('Variable_name', 'Value')
+2020-03-14 17:28:57,551 sqlalchemy.engine.base.Engine:DEBUG:result:process_rows:MainProcess:1548:Row ('lower_case_table_names', '1')
+2020-03-14 17:28:57,551 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:1548:SELECT DATABASE()
+2020-03-14 17:28:57,551 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:1548:{}
+2020-03-14 17:28:57,551 sqlalchemy.engine.base.Engine:DEBUG:result:_init_metadata:MainProcess:1548:Col ('DATABASE()',)
+2020-03-14 17:28:57,551 sqlalchemy.engine.base.Engine:DEBUG:result:process_rows:MainProcess:1548:Row ('zhyf_host',)
+2020-03-14 17:28:57,553 sqlalchemy.engine.base.Engine:INFO:base:_cursor_execute:MainProcess:1548:SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2020-03-14 17:28:57,553 sqlalchemy.engine.base.Engine:INFO:base:_cursor_execute:MainProcess:1548:{}
+2020-03-14 17:28:57,554 sqlalchemy.engine.base.Engine:INFO:base:_cursor_execute:MainProcess:1548:SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2020-03-14 17:28:57,554 sqlalchemy.engine.base.Engine:INFO:base:_cursor_execute:MainProcess:1548:{}
+2020-03-14 17:28:57,554 sqlalchemy.pool.impl.QueuePool:DEBUG:base:checkout:MainProcess:1548:Connection <mysql.connector.connection.MySQLConnection object at 0x000001D7C49A8668> checked out from pool
+2020-03-14 17:28:57,554 sqlalchemy.engine.base.Engine:INFO:base:_begin_impl:MainProcess:1548:BEGIN (implicit)
+2020-03-14 17:28:57,555 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:1548:SELECT pres_consignee.pres_num AS pres_consignee_pres_num, pres_consignee.addr_id AS pres_consignee_addr_id, pres_consignee.send_goods_time AS pres_consignee_send_goods_time, pres_consignee.is_write_mid AS pres_consignee_is_write_mid 
+FROM pres_consignee 
+WHERE pres_consignee.pres_num = %(pres_num_1)s
+2020-03-14 17:28:57,555 sqlalchemy.engine.base.Engine:INFO:base:_execute_context:MainProcess:1548:{'pres_num_1': 'MZ_201905203324'}
+2020-03-14 17:28:57,555 sqlalchemy.engine.base.Engine:DEBUG:result:_init_metadata:MainProcess:1548:Col ('pres_consignee_pres_num', 'pres_consignee_addr_id', 'pres_consignee_send_goods_time', 'pres_consignee_is_write_mid')
+2020-03-14 17:28:57,555 sqlalchemy.engine.base.Engine:DEBUG:result:process_rows:MainProcess:1548:Row ('MZ_201905203324', 10, None, 0)
+2020-03-14 17:28:57,555 sqlalchemy.pool.impl.QueuePool:DEBUG:base:_finalize_fairy:MainProcess:1548:Connection <mysql.connector.connection.MySQLConnection object at 0x000001D7C49A8668> being returned to pool
+2020-03-14 17:28:57,555 sqlalchemy.pool.impl.QueuePool:DEBUG:base:_reset:MainProcess:1548:Connection <mysql.connector.connection.MySQLConnection object at 0x000001D7C49A8668> rollback-on-return, via agent
+2020-03-14 17:28:57,556 sqlalchemy.engine.base.Engine:INFO:base:_rollback_impl:MainProcess:1548:ROLLBACK
+2020-03-14 17:28:57,556 root:INFO:views:entry_addr:MainProcess:1548:{'treat_card': '0565188', 'username': '张丽仙', 'tel': '15887841947', 'pres_num': 'MZ_201905203324', 'custom_num': '0565188', 'addr_lists': [<hospital_test.models.Address object at 0x000001D7C49A8198>, <hospital_test.models.Address object at 0x000001D7C49A81D0>], 'pres_addr_info': [<hospital_test.models.Consignee object at 0x000001D7C49A8F60>]}
+2020-03-14 17:40:55,358 django.utils.autoreload:INFO:autoreload:trigger_reload:MainProcess:1548:C:\Users\Vincent\PycharmProjects\hospital_docking\hospital_docking\hospital_docking\urls.py changed, reloading.
+2020-03-14 17:40:55,369 asyncio:DEBUG:selector_events:__init__:MainProcess:1548:Using selector: SelectSelector
+2020-03-14 17:46:27,120 asyncio:DEBUG:selector_events:__init__:MainProcess:16776:Using selector: SelectSelector
+2020-03-14 17:47:54,076 asyncio:DEBUG:selector_events:__init__:MainProcess:15300:Using selector: SelectSelector
+2020-03-14 22:08:54,627 django.utils.autoreload:INFO:autoreload:trigger_reload:MainProcess:18872:C:\Users\Vincent\PycharmProjects\hospital_docking\hospital_docking\hospital_docking\settings.py changed, reloading.
+2020-03-14 22:08:54,630 asyncio:DEBUG:selector_events:__init__:MainProcess:18872:Using selector: SelectSelector
+2020-03-14 23:30:48,503 django.utils.autoreload:INFO:autoreload:trigger_reload:MainProcess:21660:C:\Users\Vincent\PycharmProjects\hospital_docking\hospital_docking\hospital_docking\settings.py changed, reloading.
+2020-03-14 23:30:48,505 asyncio:DEBUG:selector_events:__init__:MainProcess:21660:Using selector: SelectSelector
+2020-03-14 23:59:47,316 asyncio:DEBUG:selector_events:__init__:MainProcess:7352:Using selector: SelectSelector

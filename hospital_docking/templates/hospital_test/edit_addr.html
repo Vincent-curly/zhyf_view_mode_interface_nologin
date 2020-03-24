@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>模态框</title>
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <style>
+        .login .form-row {padding: 4px 0;float: left;width: 100%;border-bottom: none;}
+        .login .form-row label {padding-right: 0.5em;line-height: 2em;font-size: 1em;clear: both;color: #333;}
+        .form-row .show_value {clear: both;padding: 8px;width: 100%;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;text-align: center;}
+        .modal-footer {text-align: center}
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">点击我显示模态框</button>
+    <form method="post" action="#" class="form-horizontal" role="form" id="myForm" onsubmit="return ">
+        <div class="modal fade" id="myModal"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <!--  定义模态框，过渡效果为淡入，id为myModal,tabindex=-1可以禁用使用tab切换，aria-labelledby用于引用模态框的标题，aria-hidden=true保持模态框在触发前窗口不可见  -->
+            <div class="modal-dialog">
+                <!--  显示模态框对话框模型（若不写下一个div则没有颜色）  -->
+                <div class="modal-content">
+                    <!--  显示模态框白色背景，所有内容都写在这个div里面  -->
+                    <div class="btn-info modal-header">
+                        <!--  模态框标题  -->
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <!--  关闭按钮  -->
+                        <h4 style="text-align: center">编辑联系人</h4>
+                        <!--  标题内容  -->
+                    </div>
+                    <div class="modal-body">
+                        <!--  模态框内容，我在此处添加一个表单 -->
+                        <div class=" login" data-admin-utc-offset="0">
+                            <form action="/admin/login/?next=/admin/" method="post" id="update-form">
+                                <div class="form-row">
+                                    <label>地址编号:</label>
+                                    <input class="show_value" type="text" readonly="readonly" name="addr_id" maxlength="50">
+                                </div>
+                                <div class="form-row">
+                                    <label>收货人姓名:</label>
+                                    <input class="show_value" type="text" name="consignee" maxlength="50" required id="id_username">
+                                </div>
+                                <div class="form-row">
+                                    <label>收货人电话:</label>
+                                    <input class="show_value" type="text" name="con_tel" required id="id_password">
+                                </div>
+                                <div class="form-row">
+                                    <label>地址:</label><br>
+                                    <select id="province" style="width: 32%;font-size: 15px">
+                                        <option>省</option>
+                                    </select>
+                                    <select id="city" style="width: 32%;font-size: 15px">
+                                        <option value="市">市(城市)</option>
+                                    </select>
+                                    <select id="zone" style="width: 32%;font-size: 15px">
+                                        <option value="区">区(县)</option>
+                                    </select>
+                                    <label>&nbsp;</label>
+                                    <input class="show_value" type="text" name="addr_str" placeholder="请输入详细地址" required id="id_password">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <!--  模态框底部样式，一般是提交或者确定按钮 -->
+                        <button type="submit" class="btn btn-info">保存</button>
+                        <button type="reset" class="btn btn-default">重置</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div>
+        </div> <!-- /.modal -->
+    </form>
+</div>
+<!-- Bootstrap的所有插件都依赖于jQuery，必须在引入bootstrap.min.js前引入jQuery -->
+<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- 压缩版的bootstrap.min.js包含了所有的Bootstrap数据API插件 -->
+<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
