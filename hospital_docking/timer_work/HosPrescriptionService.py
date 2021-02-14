@@ -110,7 +110,7 @@ def build_upload_prescription_req(pres):
                "</medication_methods>"
     content += "<medication_instruction>" + \
                (pres.medication_instruction if pres.medication_instruction else '') + "</medication_instruction>"
-    content += "<is_hos>" + '2' if pres.source == 1 else '1' + "</is_hos>"
+    content += "<is_hos>" + ('2' if pres.source == 1 else '1') + "</is_hos>"
     content += "<medici_xq>"
     for pres_det in pres_details:
         content += "<xq>"
